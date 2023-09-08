@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #0e1538;
+}
+.wrapper{
+  width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+}
+.wrapper::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+
+.wrapper::after{
+  content: '';
+  position: absolute;
+  background: #0e1538;
+  border-radius: 16px;
+  inset: 4px;
+}
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.wrapper .profile_pic img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  border-radius: 50%;
+  z-index: 10;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+  padding-top: 10px;
+}
+.wrapper .content h2{
+  position: absolute;
+  top: 200px;
+  left: 70px;
+  color: #fff;
+  font-family: 'consolas', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  font-size: 28px;
+  z-index: 10;
+}
+.wrapper .content span{
+  position: absolute;
+  top: 235px;
+  left: 67px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  z-index: 10;
+}
+.btns{
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  z-index: 10;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+a{
+  text-decoration: none;
+}
+.f-btn{
+  color: #00ccff;
+  border: 2px solid #00ccff;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+.f-btn:hover{
+  background:#00ccff;
+  color: #000;
+}
+.h-btn{
+  color: #fff;
+}
